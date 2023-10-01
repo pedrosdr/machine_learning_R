@@ -1,5 +1,3 @@
-# setwd('C:/Users/Lenovo/Documents/Udemy_Machine_Learning_R')
-
 base <- read.csv('credit_data.csv')
 base$clientid = NULL
 summary(base)
