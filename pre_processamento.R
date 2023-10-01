@@ -16,3 +16,6 @@ base = base[base$age > 0,]
 # calcular a média da idade
 mean_age = mean(base$age[base$age > 0], na.rm = TRUE)
 base$age = ifelse(base$age < 0, mean_age, base$age)
+
+# tratamento dos valores faltantes
+base$age = ifelse(is.na(base$age), mean_age, base$age)
