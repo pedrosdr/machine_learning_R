@@ -1,4 +1,6 @@
 library(dplyr)
+library(caTools)
+# install.packages("caTools")
 
 base <- read.csv('census.csv')
 base$X = NULL
@@ -22,3 +24,8 @@ base[3] = scale(base[3])
 base[5] = scale(base[5])
 base[, 11:13] = scale(base[, 11:13])
 colnames(base[, c(1, 3, 5)]) = c('age', 'final.weight', 'education.num')
+
+set.seed(1)
+divisao = sample.split(base$income, SplitRatio = 0.85)
+x_census_treinamento = subset(base, divisao == TRUE)
+x_census_teste = subset(base, divisao == FALSE)

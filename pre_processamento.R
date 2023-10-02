@@ -1,3 +1,5 @@
+library(caTools)
+
 base <- read.csv('credit_data.csv')
 base$clientid = NULL
 summary(base)
@@ -18,3 +20,9 @@ base$age = ifelse(is.na(base$age), mean_age, base$age)
 
 # Escalonamento de atributos
 base[, c('income', 'age', 'loan')] = scale(base)
+
+# Base de treinamento e teste
+set.seed(1)
+divisao = sample.split(base$default, SplitRatio = 0.75)
+x_credit_treinamento = subset(base, divisao == TRUE)
+x_credit_teste = subset(base, divisao == FALSE)
