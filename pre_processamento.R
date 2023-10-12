@@ -21,6 +21,9 @@ base$age = ifelse(is.na(base$age), mean_age, base$age)
 # Escalonamento de atributos
 base[, c('income', 'age', 'loan')] = scale(base)
 
+# Encode da classe
+base$default = factor(base$default, levels = c(0, 1))
+
 # Base de treinamento e teste
 set.seed(1)
 divisao = sample.split(base$default, SplitRatio = 0.75)
