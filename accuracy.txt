@@ -4,7 +4,15 @@
 0.916 - Naive Bayes - inconsistentes + faltantes
 0.914 - Naive Bayes - sem pré-processamento
 
+0.97 - Árvore - inconsistentes + faltantes + escalonamento
+0.97 - Árvore - inconsistentes + faltantes
+0.968 - Árvore - sem pré-processamento
+
 # Base census
 0.8214 - Naive Bayes - inconsistentes + faltantes + escalonamento
 0.8216 - Naive Bayes - inconsistentes + faltantes
 0.8216 - Naive Bayes - sem pré-processamento
+
+0.8351 - Árvore - inconsistentes + faltantes + escalonamento
+0.8351 - Árvore - inconsistentes + faltantes
+0.8351 - Árvore - sem pré-processamento
