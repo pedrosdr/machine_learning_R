@@ -20,13 +20,18 @@ base$native.country = factor(base$native.country, levels = c(' Cambodia', ' Cana
 
 base$income = factor(base$income, levels = c(' <=50K', ' >50K'), labels = c(0, 1))
 
-base[1] = scale(base[1])
-base[3] = scale(base[3])
-base[5] = scale(base[5])
-base[, 11:13] = scale(base[, 11:13])
+# base[1] = scale(base[1])
+# base[3] = scale(base[3])
+# base[5] = scale(base[5])
+# base[, 11:13] = scale(base[, 11:13])
 colnames(base[, c(1, 3, 5)]) = c('age', 'final.weight', 'education.num')
 
 set.seed(1)
 divisao = sample.split(base$income, SplitRatio = 0.85)
 x_census_treinamento = subset(base, divisao == TRUE)
 x_census_teste = subset(base, divisao == FALSE)
+
+# ZeroR Classifier
+div_teste = table(x_census_teste$income)
+min_accuracy = print(max(div_teste) / nrow(x_census_teste))
+min_accuracy
