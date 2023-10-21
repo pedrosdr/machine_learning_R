@@ -17,7 +17,7 @@ base$age = ifelse(base$age < 0, mean_age, base$age)
 base$age = ifelse(is.na(base$age), mean_age, base$age)
 
 # Escalonamento de atributos
-# base[, c('income', 'age', 'loan')] = scale(base)
+base[, c('income', 'age', 'loan')] = scale(base)
 
 # Encode da classe
 base$default = factor(base$default, levels = c(0, 1))

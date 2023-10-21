@@ -38,3 +38,6 @@
 0.8576 (100 trees) - Random Forest - inconsistentes + faltantes
 
 0.8042 - CN2 - inconsistentes + faltantes + escalonamento
+
+0.8216 - KNN - inconsistentes + faltantes + escalonamento
+0.7639 - KNN - inconsistentes + faltantes
