@@ -34,3 +34,9 @@ x_credit_teste = subset(base, divisao == FALSE)
 div_teste = table(x_credit_teste$default)
 min_accuracy = print(max(div_teste) / nrow(x_credit_teste))
 min_accuracy
+
+
+xtrain = x_credit_treinamento[, -4]
+ytrain = x_credit_treinamento[, 4]
+xtest = x_credit_teste[, -4]
+ytest = x_credit_teste[, 4]

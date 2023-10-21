@@ -20,6 +20,10 @@
 0.978 - KNN - inconsistentes + faltantes + escalonamento
 0.866 - KNN - inconsistentes + faltantes
 
+0.95 - Regressão Logistica - inconsistentes + faltantes + escalonamento
+0.95 - Regressão Logistica - inconsistentes + faltantes
+0.9499 - Regressão Logistica - inconsistentes + faltantes
+
 
 -----------------------------------------------------------
 # Base census
